@@ -1,0 +1,82 @@
+<div class="wrap">
+  <div class="outer-circle round">
+    <div class="green corner"></div>
+    <div class="yellow corner"></div>
+    <div class="blue corner"></div>
+    <div class="red corner"></div>
+    <div class="stripe horizontal"></div>
+    <div class="stripe vertical"></div>
+    <div class="inner-circle round"></div>
+  </div>
+</div>
+
+
+*************CSS************************
+body{
+  margin: 0;
+}
+.wrap {
+  padding: 15px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+}
+.outer-circle {
+  margin: 10px auto;
+  background-color: #222;
+  width: 380px;
+  height: 380px;
+  padding: 15px;
+}
+.inner-circle {
+  background-color: white;
+  height: 210px;
+  width: 210px;
+  position: relative;
+  top: -61%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  border: 9px solid #222;
+}
+.stripe {
+  background-color: #222;
+  width: 380px;
+  min-height: 12px;
+  position: relative;
+  transform: translateX(-50%);
+}
+.horizontal {
+  margin-top: 178px; /* .outer-circle radius - height of 12px (.stripe) */
+  left: 50%;
+}
+.vertical {
+  transform: rotate(90deg);
+  margin-top: -6px;
+}
+.round {
+  border-radius: 100%;
+}
+.corner {
+  height: 190px;
+  width: 190px;
+  float: left;
+}
+.green {
+  background-color: green;
+  border-top-left-radius: 100%;
+}
+.yellow {
+  background-color: yellow;
+  border-top-right-radius: 100%;
+}
+.blue {
+  background-color: blue;
+  border-bottom-left-radius: 100%;
+}
+.red {
+  background-color: red;
+  border-bottom-right-radius: 100%;
+}
